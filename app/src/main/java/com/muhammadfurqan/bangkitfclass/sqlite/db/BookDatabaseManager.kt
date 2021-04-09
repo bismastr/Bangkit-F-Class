@@ -32,7 +32,42 @@ class BookDatabaseManager(context: Context) {
         writeableDb.close()
     }
 
+    fun updateData(name: String, id: String?) {
+        val writeableDb = db.writableDatabase
+
+        val contentValue = ContentValues()
+        contentValue.put(BookDatabaseOpenHelper.KEY_NAME, name)
+
+        val selection = BookDatabaseOpenHelper.KEY_ID + " = ?"
+
+        writeableDb.update(
+            BookDatabaseOpenHelper.TABLE_BOOK,
+            contentValue,
+            selection,
+            arrayOf(id)
+        )
+
+        writeableDb.close()
+    }
+
+    fun delete(id: String?) {
+        val writeableDb = db.writableDatabase
+        val selection = BookDatabaseOpenHelper.KEY_ID + " = ?"
+
+        val selectionArgs = arrayOf(id)
+
+        writeableDb.delete(
+            BookDatabaseOpenHelper.TABLE_BOOK,
+            selection,
+            selectionArgs
+        )
+
+        writeableDb.close()
+    }
+
     fun getData(): List<BookModel> {
+        val arrayBookList = arrayListOf<BookModel>()
+
         val bookList: MutableList<BookModel> = mutableListOf()
 
         // get readable database
@@ -54,6 +89,7 @@ class BookDatabaseManager(context: Context) {
                     name = getString(getColumnIndexOrThrow(BookDatabaseOpenHelper.KEY_NAME))
                 )
                 // add to book list
+                arrayBookList.add(book)
                 bookList.add(book)
             }
         }

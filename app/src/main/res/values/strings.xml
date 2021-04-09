@@ -16,4 +16,8 @@
     <string name="add_label">Add</string>
     <string name="list_books_in_database_label">List Books in Database</string>
     <string name="get_phone_list_label">Get Phone List</string>
+    <string name="id">ID</string>
+    <string name="book_name">Book Name</string>
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
 </resources>
