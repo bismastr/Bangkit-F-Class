@@ -1,16 +1,13 @@
-package com.muhammadfurqan.bangkitfclass.sqlite.db
+package com.muhammadfurqan.bangkitfclass.sqlite
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
-import com.muhammadfurqan.bangkitfclass.R
-import com.muhammadfurqan.bangkitfclass.databinding.ActivityDetailBinding
 import com.muhammadfurqan.bangkitfclass.databinding.ActivityDetailBookBinding
-import com.muhammadfurqan.bangkitfclass.sqlite.BookModel
 import com.muhammadfurqan.bangkitfclass.sqlite.adapter.BookAdapter
-import com.muhammadfurqan.bangkitfclass.sqlite.adapter.viewholder.BookViewHolder
+import com.muhammadfurqan.bangkitfclass.sqlite.db.BookDatabaseManager
 import kotlinx.coroutines.launch
 
 class DetailBookActivity : AppCompatActivity() {

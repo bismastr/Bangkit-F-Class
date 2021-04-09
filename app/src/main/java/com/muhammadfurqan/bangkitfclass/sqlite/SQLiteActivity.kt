@@ -9,14 +9,11 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.muhammadfurqan.bangkitfclass.DummyData
 import com.muhammadfurqan.bangkitfclass.R
 import com.muhammadfurqan.bangkitfclass.databinding.ActivitySqliteBinding
-import com.muhammadfurqan.bangkitfclass.list.adapter.HeroAdapter
 import com.muhammadfurqan.bangkitfclass.sqlite.adapter.BookAdapter
 import com.muhammadfurqan.bangkitfclass.sqlite.adapter.viewholder.BookViewHolder
 import com.muhammadfurqan.bangkitfclass.sqlite.db.BookDatabaseManager
-import com.muhammadfurqan.bangkitfclass.sqlite.db.DetailBookActivity
 import kotlinx.coroutines.launch
 
 /**
